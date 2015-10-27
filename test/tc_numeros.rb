@@ -12,4 +12,10 @@ class TestNumeros < Test::Unit::TestCase
         n1 + n2
         assert_equal("5/4", n1.to_s)
     end
+    def test_resta
+        n1 = Numero.new(5,6)
+        n2 = Numero.new(2,3)
+        n1 - n2
+        assert_equal("1/6", n1.to_s)
+    end
 end

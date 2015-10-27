@@ -27,4 +27,10 @@ class Numero
         @y = (@y*other.y)
         mcd(@x,@y)
     end
+    
+    def - (other) # Resta
+        @x = ((@x*other.y) - (@y*other.x))
+        @y = (@y*other.y)
+        mcd(@x,@y)
+    end
 end
