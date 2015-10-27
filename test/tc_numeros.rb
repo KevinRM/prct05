@@ -2,7 +2,7 @@ require "lib/numeros"
 require "test/unit"
 
 class TestNumeros < Test::Unit::TestCase
-    def init
-        assert_equal(2, Numero.new(3,0).x)
+    def test_init
+        assert_equal("3/2", Numero.new(3,2).to_s)
     end
 end
