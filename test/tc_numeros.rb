@@ -6,6 +6,9 @@ class TestNumeros < Test::Unit::TestCase
         assert_equal("3/2", Numero.new(3,2).to_s)
         assert_equal("59/19", Numero.new(177,57).to_s)
     end
+    def test_inicializacion_fallo
+        assert_raise(RuntimeError){Numero.new(2,0)}
+    end
     def test_suma
         n1 = Numero.new(1,2)
         n2 = Numero.new(3,4)
