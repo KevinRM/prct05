@@ -39,4 +39,10 @@ class Numero
         @y = (@y*other.y)
         mcd(@x,@y)
     end
+    
+    def / (other) # Division
+        @x = (@x*other.y)
+        @y = (@y*other.x)
+        mcd(@x,@y)
+    end
 end

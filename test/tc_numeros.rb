@@ -24,4 +24,10 @@ class TestNumeros < Test::Unit::TestCase
         n1 * n2
         assert_equal("4/3", n1.to_s)
     end
+    def test_division
+        n1 = Numero.new(3,7)
+        n2 = Numero.new(1,2)
+        n1 / n2
+        assert_equal("6/7", n1.to_s)
+    end
 end
