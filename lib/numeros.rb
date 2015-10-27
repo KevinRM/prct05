@@ -14,7 +14,7 @@ class Numero
     
     def mcd(x,y) #Maximo comun divisor
         x, y = x.abs, y.abs
-        while y != 0
+        while y != 0 # Aqui estaba el fallo
             x, y = y, x % y
         end
         x
@@ -22,7 +22,9 @@ class Numero
         @y = @y/x
     end
     
-    #def + (other)
-        
-    #end
+    def + (other) # Suma
+        @x = ((@x*other.y) + (@y*other.x))
+        @y = (@y*other.y)
+        mcd(@x,@y)
+    end
 end
